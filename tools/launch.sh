@@ -1,7 +1,6 @@
 set -e
 source ./tools/set_env.sh
 mkdir -p output
-pkill -9 -f llava.serve
 model_path=/mnt/nas/share-map/common/models/llm/llava/llava-v1.5-13b
 python -m llava.serve.controller --host 0.0.0.0 --port 10000 > output/controller.log 2>&1 &
 sleep 30

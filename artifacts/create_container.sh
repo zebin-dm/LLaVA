@@ -11,6 +11,8 @@ docker run -it -d --name $NAME \
   --shm-size 2G \
   -e DISPLAY \
   -p 6000:22 \
+  -p 10000:10000 \
+  -p 40000:40000 \
   -v /etc/localtime:/etc/localtime:ro \
   -v /media:/media \
   -v /mnt:/mnt \
